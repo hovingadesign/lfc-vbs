@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1000" width="720" height="1000">
+  <defs>
+    <linearGradient id="borderGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#D4A76A;stop-opacity:0.6"/>
+      <stop offset="50%" style="stop-color:#C5961A;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#D4A76A;stop-opacity:0.6"/>
+    </linearGradient>
+    <linearGradient id="cornerFade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#C5961A;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#C5961A;stop-opacity:0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- OUTER BORDER LINES - thin and subtle -->
+  <!-- Top -->
+  <line x1="30" y1="25" x2="690" y2="25" style="stroke:#C5961A;stroke-width:0.6;opacity:0.35;"/>
+  <!-- Bottom -->
+  <line x1="30" y1="975" x2="690" y2="975" style="stroke:#C5961A;stroke-width:0.6;opacity:0.35;"/>
+  <!-- Left -->
+  <line x1="30" y1="25" x2="30" y2="975" style="stroke:#C5961A;stroke-width:0.6;opacity:0.35;"/>
+  <!-- Right -->
+  <line x1="690" y1="25" x2="690" y2="975" style="stroke:#C5961A;stroke-width:0.6;opacity:0.35;"/>
+
+  <!-- INNER BORDER LINES - even thinner -->
+  <line x1="35" y1="30" x2="685" y2="30" style="stroke:#C5961A;stroke-width:0.3;opacity:0.2;"/>
+  <line x1="35" y1="970" x2="685" y2="970" style="stroke:#C5961A;stroke-width:0.3;opacity:0.2;"/>
+  <line x1="35" y1="30" x2="35" y2="970" style="stroke:#C5961A;stroke-width:0.3;opacity:0.2;"/>
+  <line x1="685" y1="30" x2="685" y2="970" style="stroke:#C5961A;stroke-width:0.3;opacity:0.2;"/>
+
+  <!-- ============ TOP-LEFT CORNER ============ -->
+  <!-- Corner bracket -->
+  <path d="M30,55 L30,25 L60,25" style="fill:none;stroke:#C5961A;stroke-width:1.5;opacity:0.5;stroke-linecap:round;"/>
+  <!-- Wave motif -->
+  <path d="M40,38 Q46,33 52,38 Q58,43 64,38 Q70,33 76,38" style="fill:none;stroke:#2980b9;stroke-width:0.9;opacity:0.3;"/>
+  <!-- Small staff -->
+  <line x1="45" y1="42" x2="45" y2="55" style="stroke:#5a3215;stroke-width:1.2;opacity:0.3;stroke-linecap:round;"/>
+  <!-- Staff crook -->
+  <path d="M45,42 Q45,39 47,38 Q49,37.5 50,39" style="fill:none;stroke:#5a3215;stroke-width:1;opacity:0.3;stroke-linecap:round;"/>
+
+  <!-- ============ TOP-RIGHT CORNER ============ -->
+  <path d="M690,55 L690,25 L660,25" style="fill:none;stroke:#C5961A;stroke-width:1.5;opacity:0.5;stroke-linecap:round;"/>
+  <!-- Wave motif -->
+  <path d="M680,38 Q674,33 668,38 Q662,43 656,38 Q650,33 644,38" style="fill:none;stroke:#2980b9;stroke-width:0.9;opacity:0.3;"/>
+  <!-- Small tablets -->
+  <rect x="668" y="42" width="7" height="10" rx="1.5" ry="1.5" style="fill:none;stroke:#808080;stroke-width:0.7;opacity:0.25;"/>
+  <rect x="677" y="42" width="7" height="10" rx="1.5" ry="1.5" style="fill:none;stroke:#808080;stroke-width:0.7;opacity:0.25;"/>
+  <!-- Tablet lines -->
+  <line x1="670" y1="45" x2="673" y2="45" style="stroke:#808080;stroke-width:0.3;opacity:0.2;"/>
+  <line x1="670" y1="47" x2="673" y2="47" style="stroke:#808080;stroke-width:0.3;opacity:0.2;"/>
+  <line x1="670" y1="49" x2="673" y2="49" style="stroke:#808080;stroke-width:0.3;opacity:0.2;"/>
+  <line x1="679" y1="45" x2="682" y2="45" style="stroke:#808080;stroke-width:0.3;opacity:0.2;"/>
+  <line x1="679" y1="47" x2="682" y2="47" style="stroke:#808080;stroke-width:0.3;opacity:0.2;"/>
+  <line x1="679" y1="49" x2="682" y2="49" style="stroke:#808080;stroke-width:0.3;opacity:0.2;"/>
+
+  <!-- ============ BOTTOM-LEFT CORNER ============ -->
+  <path d="M30,945 L30,975 L60,975" style="fill:none;stroke:#C5961A;stroke-width:1.5;opacity:0.5;stroke-linecap:round;"/>
+  <!-- Wave motif -->
+  <path d="M40,962 Q46,957 52,962 Q58,967 64,962 Q70,957 76,962" style="fill:none;stroke:#2980b9;stroke-width:0.9;opacity:0.3;"/>
+  <!-- Small flame/pillar -->
+  <path d="M48,955 Q46,951 47,948 Q48,945 49,948 Q50,951 48,955 Z" style="fill:#C5961A;opacity:0.25;"/>
+
+  <!-- ============ BOTTOM-RIGHT CORNER ============ -->
+  <path d="M690,945 L690,975 L660,975" style="fill:none;stroke:#C5961A;stroke-width:1.5;opacity:0.5;stroke-linecap:round;"/>
+  <!-- Wave motif -->
+  <path d="M680,962 Q674,957 668,962 Q662,967 656,962 Q650,957 644,962" style="fill:none;stroke:#2980b9;stroke-width:0.9;opacity:0.3;"/>
+  <!-- Small staff -->
+  <line x1="675" y1="945" x2="675" y2="958" style="stroke:#5a3215;stroke-width:1.2;opacity:0.3;stroke-linecap:round;"/>
+  <path d="M675,945 Q675,942 677,941 Q679,940.5 680,942" style="fill:none;stroke:#5a3215;stroke-width:1;opacity:0.3;stroke-linecap:round;"/>
+
+  <!-- ============ SIDE ACCENTS (very subtle) ============ -->
+  <!-- Left side - small wave at midpoint -->
+  <path d="M32,490 Q36,485 32,480" style="fill:none;stroke:#2980b9;stroke-width:0.6;opacity:0.15;"/>
+  <path d="M32,510 Q36,515 32,520" style="fill:none;stroke:#2980b9;stroke-width:0.6;opacity:0.15;"/>
+  <!-- Tiny diamond -->
+  <polygon points="32,500 34,498 36,500 34,502" style="fill:#C5961A;opacity:0.2;"/>
+
+  <!-- Right side - small wave at midpoint -->
+  <path d="M688,490 Q684,485 688,480" style="fill:none;stroke:#2980b9;stroke-width:0.6;opacity:0.15;"/>
+  <path d="M688,510 Q684,515 688,520" style="fill:none;stroke:#2980b9;stroke-width:0.6;opacity:0.15;"/>
+  <!-- Tiny diamond -->
+  <polygon points="688,500 686,498 684,500 686,502" style="fill:#C5961A;opacity:0.2;"/>
+
+  <!-- Top center accent -->
+  <polygon points="360,24 362,20 364,24" style="fill:#C5961A;opacity:0.25;"/>
+
+  <!-- Bottom center accent -->
+  <polygon points="360,976 362,980 364,976" style="fill:#C5961A;opacity:0.25;"/>
+</svg>

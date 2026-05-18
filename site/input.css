@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palette — carried over from the curriculum PDFs */
+  --color-parchment-50: #FBF5E3;
+  --color-parchment-100: #F5EBD0;
+  --color-parchment-200: #EBDDB3;
+  --color-parchment-300: #DEC893;
+  --color-ink-900: #1F1208;
+  --color-ink-800: #2A1A0F;
+  --color-ink-700: #3A2718;
+  --color-ink-600: #5C4633;
+  --color-ink-500: #7A6650;
+  --color-crimson-900: #4A0E0E;
+  --color-crimson-800: #6B1414;
+  --color-crimson-700: #8B1A1A;
+  --color-crimson-600: #A52828;
+  --color-gold-700: #9A7414;
+  --color-gold-600: #C5961A;
+  --color-gold-500: #D4A937;
+  --color-gold-400: #E0B748;
+
+  /* Type */
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Lora", ui-serif, Georgia, serif;
+
+  /* Custom radii */
+  --radius-card: 14px;
+}
+
+/* Paper-grain noise texture, generated inline (no extra request) */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-parchment-50);
+    color: var(--color-ink-800);
+    font-family: var(--font-body);
+    font-feature-settings: "liga", "kern", "onum";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Soft paper grain — keeps payload tiny */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.15 0 0 0 0 0.1 0 0 0 0 0.05 0 0 0 0.18 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  /* Headings get optical-size + a touch of weight axis variance */
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    font-variation-settings: "opsz" 144, "SOFT" 30;
+  }
+}
+
+@layer components {
+  .ornament-rule {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-gold-600);
+  }
+  .ornament-rule::before,
+  .ornament-rule::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--color-gold-600), transparent);
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    background: var(--color-crimson-700);
+    color: var(--color-parchment-50);
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border-radius: 999px;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05), 0 8px 24px -10px rgba(139,26,26,0.5);
+  }
+  .btn-primary:hover {
+    background: var(--color-crimson-800);
+    transform: translateY(-1px);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05), 0 12px 28px -10px rgba(139,26,26,0.6);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: transparent;
+    color: var(--color-ink-800);
+    font-family: var(--font-display);
+    font-weight: 500;
+    border: 1px solid var(--color-ink-800);
+    border-radius: 999px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .btn-ghost:hover {
+    background: var(--color-ink-800);
+    color: var(--color-parchment-50);
+  }
+
+  .info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.875rem;
+    padding: 0.875rem 0;
+    border-bottom: 1px dashed var(--color-parchment-300);
+  }
+  .info-row:last-child { border-bottom: 0; }
+
+  /* Subtle entrance — only animates transform so content is always visible
+     even if the screenshot fires before the animation completes. */
+  .rise {
+    animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  @keyframes rise {
+    from { transform: translateY(10px); }
+    to   { transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .rise { animation: none; }
+  }
+}

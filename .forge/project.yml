@@ -1,0 +1,19 @@
+owner: HovingaCo
+client: LFC
+lifespan: project
+status: active
+port: 8727
+created: null
+stack: python, weasyprint
+plugins: []
+skills:
+- app
+- frontend-design
+- humanizer
+- notify
+- qmd
+- qmd-ingest
+- tailwind-v4
+- visual-review
+- wrap-up
+- write-like-me

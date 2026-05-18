@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: letter;
+    margin: 0.5in 0.65in 0.55in 0.65in;
+
+    @bottom-center {
+      content: "Little Farms Chapel  ·  VBS 2026  ·  Deliverance";
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 7.5pt;
+      color: #9E8E7E;
+      letter-spacing: 0.5px;
+    }
+
+    @bottom-right {
+      content: counter(page);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 7.5pt;
+      color: #9E8E7E;
+    }
+  }
+
+  @page :first {
+    @bottom-right {
+      content: none;
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 10.5pt;
+    line-height: 1.5;
+    color: #2B1B0E;
+  }
+
+  /* ════════════════════════════════════════════════════
+     PAGE STRUCTURE
+     ════════════════════════════════════════════════════ */
+  .page {
+    page-break-after: always;
+    position: relative;
+    width: 100%;
+    min-height: 9.4in;
+  }
+  .page:last-child { page-break-after: avoid; }
+
+  /* ════════════════════════════════════════════════════
+     COMPACT PAGE HEADER — single-line masthead
+     ════════════════════════════════════════════════════ */
+  .page-header {
+    border-bottom: 1.5pt solid #8B1A1A;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+    position: relative;
+  }
+  .page-header::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.5pt;
+    background: #C5961A;
+    position: absolute;
+    bottom: -3.5px;
+    left: 0;
+  }
+  .header-row {
+    display: table;
+    width: 100%;
+  }
+  .header-left {
+    display: table-cell;
+    vertical-align: baseline;
+  }
+  .header-right {
+    display: table-cell;
+    vertical-align: baseline;
+    text-align: right;
+  }
+  .header-title {
+    font-size: 15pt;
+    font-weight: bold;
+    color: #8B1A1A;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    font-family: Georgia, serif;
+  }
+  .header-subtitle {
+    font-size: 8pt;
+    color: #A08060;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-left: 8px;
+  }
+  .header-level-badge {
+    display: inline-block;
+    font-size: 7.5pt;
+    font-weight: bold;
+    color: #8B1A1A;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border: 1pt solid #8B1A1A;
+    padding: 1px 8px;
+    border-radius: 2px;
+  }
+
+  /* ════════════════════════════════════════════════════
+     DAY BANNER
+     ════════════════════════════════════════════════════ */
+  .day-banner {
+    background: #3D2B1F;
+    color: #F5E6D0;
+    padding: 6px 14px;
+    margin-bottom: 14px;
+  }
+  .day-banner-inner {
+    display: table;
+    width: 100%;
+  }
+  .day-banner-left {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .day-banner-right {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+  }
+  .day-banner h2 {
+    font-size: 12pt;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+  .day-banner .scripture-ref {
+    font-size: 8.5pt;
+    font-style: italic;
+    color: #D4A76A;
+  }
+
+  /* ════════════════════════════════════════════════════
+     CONTENT SECTIONS
+     ════════════════════════════════════════════════════ */
+  .worksheet-intro {
+    font-size: 9.5pt;
+    font-style: italic;
+    color: #6B5040;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 0.5pt solid #DDD0C0;
+  }
+
+  .summary-text {
+    font-size: 10pt;
+    line-height: 1.55;
+    margin-bottom: 14px;
+    padding: 8px 14px;
+    background: #FAF6F0;
+    border-left: 2.5pt solid #C5961A;
+  }
+
+  .reading-ref {
+    font-size: 9.5pt;
+    font-style: italic;
+    color: #6B5040;
+    margin-bottom: 10px;
+    padding: 3px 0;
+  }
+
+  .key-concept {
+    background: #FAF6F0;
+    border: 0.75pt solid #D4C4A8;
+    padding: 8px 14px;
+    margin-bottom: 12px;
+    font-size: 10pt;
+    line-height: 1.5;
+  }
+  .key-concept-label {
+    font-weight: bold;
+    color: #8B1A1A;
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+
+  /* ════════════════════════════════════════════════════
+     CATECHISM
+     ════════════════════════════════════════════════════ */
+  .catechism-block {
+    margin-bottom: 14px;
+    padding: 10px 14px;
+    background: #F8F4EC;
+    border-top: 2pt solid #8B1A1A;
+  }
+  .catechism-block h3 {
+    font-size: 9pt;
+    color: #8B1A1A;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  .catechism-qa {
+    margin-bottom: 8px;
+    font-size: 9.5pt;
+    line-height: 1.45;
+  }
+  .catechism-qa:last-child { margin-bottom: 0; }
+  .catechism-q {
+    font-weight: bold;
+    color: #3D2B1F;
+  }
+  .catechism-a {
+    color: #5C3D2E;
+    padding-left: 18px;
+    margin-top: 1px;
+  }
+
+  /* ════════════════════════════════════════════════════
+     DISCUSSION QUESTIONS
+     ════════════════════════════════════════════════════ */
+  .discussion-section {
+    margin-bottom: 14px;
+  }
+  .discussion-section h3 {
+    font-size: 10pt;
+    color: #8B1A1A;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    border-bottom: 1pt solid #D4C4A8;
+    padding-bottom: 4px;
+  }
+  .discussion-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: disc-counter;
+  }
+  .discussion-list li {
+    counter-increment: disc-counter;
+    font-size: 10pt;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    padding-left: 26px;
+    position: relative;
+  }
+  .discussion-list li::before {
+    content: counter(disc-counter);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    color: #fff;
+    background: #8B1A1A;
+    width: 16px;
+    height: 16px;
+    font-size: 8pt;
+    text-align: center;
+    line-height: 16px;
+    border-radius: 2px;
+    top: 2px;
+  }
+
+  /* ════════════════════════════════════════════════════
+     NOTES / LIST LINES
+     ════════════════════════════════════════════════════ */
+  .notes-section h3 {
+    font-size: 9.5pt;
+    color: #3D2B1F;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: bold;
+  }
+  .list-activity {
+    margin-bottom: 14px;
+  }
+  .list-activity h3 {
+    font-size: 10pt;
+    color: #3D2B1F;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  .list-lines {
+    list-style: none;
+    padding: 0;
+  }
+  .list-lines li {
+    border-bottom: 0.5pt solid #C4B8A8;
+    height: 28px;
+    margin-bottom: 0;
+  }
+
+  /* ════════════════════════════════════════════════════
+     ACTIVITY LABELS (Drawing / Coloring)
+     ════════════════════════════════════════════════════ */
+  .activity-label {
+    font-size: 14pt;
+    font-weight: bold;
+    color: #8B1A1A;
+    text-align: center;
+    margin: 6px 0 2px 0;
+    letter-spacing: 1px;
+  }
+  .activity-instruction {
+    font-size: 10pt;
+    text-align: center;
+    color: #6B5040;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+
+  /* ════════════════════════════════════════════════════
+     DRAWING AREA
+     ════════════════════════════════════════════════════ */
+  .drawing-area {
+    border: 1pt solid #3D2B1F;
+    min-height: 7in;
+    width: 100%;
+  }
+  .drawing-area-short {
+    border: 1pt solid #3D2B1F;
+    min-height: 5.2in;
+    width: 100%;
+  }
+
+  /* ════════════════════════════════════════════════════
+     COLORING AREA
+     ════════════════════════════════════════════════════ */
+  .coloring-outer {
+    display: table;
+    width: 100%;
+    height: 7.2in;
+  }
+  .coloring-area {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+  }
+  .coloring-area img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-height: 7.2in;
+    object-fit: contain;
+  }
+  .coloring-area svg {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-height: 7.2in;
+  }
+
+  /* ════════════════════════════════════════════════════
+     WORD SEARCH
+     ════════════════════════════════════════════════════ */
+  .wordsearch-section {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .wordsearch-section h3 {
+    font-size: 11pt;
+    color: #8B1A1A;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+  }
+  .wordsearch-prompt {
+    font-size: 9pt;
+    color: #6B5040;
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+  .wordsearch-grid {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1.5pt solid #8B1A1A;
+  }
+  .wordsearch-grid td {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    font-weight: bold;
+    border: 0.5pt solid #DDD0C0;
+    color: #3D2B1F;
+    padding: 0;
+  }
+  .word-bank {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 0.5pt solid #D4C4A8;
+  }
+  .word-bank-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 8.5pt;
+    color: #8B1A1A;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .word-bank-words {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 8.5pt;
+    line-height: 1.8;
+    color: #3D2B1F;
+  }
+  .word-bank-words span {
+    margin: 0 8px;
+    white-space: nowrap;
+  }
+
+  /* ════════════════════════════════════════════════════
+     CROSSWORD / CRISS-CROSS PUZZLE
+     ════════════════════════════════════════════════════ */
+  .crossword-section {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .crossword-section h3 {
+    font-size: 11pt;
+    color: #8B1A1A;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+  }
+  .crossword-prompt {
+    font-size: 9pt;
+    color: #6B5040;
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+  .crossword-grid {
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  .crossword-cell {
+    width: 24px;
+    height: 24px;
+    border: 1pt solid #3D2B1F;
+    position: relative;
+    padding: 0;
+  }
+  .crossword-blank {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: none;
+    padding: 0;
+  }
+  .crossword-num {
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    font-size: 6pt;
+    color: #8B1A1A;
+    font-weight: bold;
+    line-height: 1;
+  }
+  .word-bank-group {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 8.5pt;
+    line-height: 1.8;
+    color: #3D2B1F;
+    margin-bottom: 2px;
+  }
+  .word-bank-group strong {
+    font-family: Georgia, serif;
+    color: #8B1A1A;
+    font-size: 8pt;
+  }
+
+  /* ════════════════════════════════════════════════════
+     CROSSWORD CLUE LISTS
+     ════════════════════════════════════════════════════ */
+  .crossword-clues {
+    display: table;
+    width: 100%;
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 0.5pt solid #D4C4A8;
+    text-align: left;
+  }
+  .crossword-clues-col {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    padding: 0 10px;
+  }
+  .clue-list-title {
+    font-weight: bold;
+    font-size: 9pt;
+    color: #8B1A1A;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    border-bottom: 0.5pt solid #D4C4A8;
+    padding-bottom: 2px;
+  }
+  .clue-list {
+    font-size: 8.5pt;
+    line-height: 1.7;
+    color: #3D2B1F;
+  }
+  .clue-item {
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  /* ════════════════════════════════════════════════════
+     ANSWER KEY PAGES
+     ════════════════════════════════════════════════════ */
+  .answer-key-title {
+    font-size: 14pt;
+    font-weight: bold;
+    color: #8B1A1A;
+    text-align: center;
+    margin: 6px 0 14px 0;
+    letter-spacing: 1px;
+  }
+  .answer-grid {
+    margin: 0 auto;
+  }
+  .answer-cell {
+    position: relative;
+  }
+  .answer-letter {
+    display: block;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10pt;
+    font-weight: bold;
+    color: #3D2B1F;
+    line-height: 24px;
+  }
+  .answer-list {
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .answer-item {
+    font-size: 10pt;
+    line-height: 2;
+    color: #3D2B1F;
+    border-bottom: 0.5pt solid #EDE6DA;
+    padding: 2px 0;
+  }
+  .answer-num {
+    display: inline-block;
+    width: 24px;
+    font-weight: bold;
+    color: #8B1A1A;
+  }
+  .answer-scrambled {
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 2px;
+    color: #8B7355;
+  }
+  .answer-word {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .answer-secret {
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 14px;
+    border-top: 1pt solid #D4C4A8;
+  }
+  .answer-secret-label {
+    font-weight: bold;
+    font-size: 10pt;
+    color: #8B1A1A;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .answer-secret-word {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #3D2B1F;
+    letter-spacing: 4px;
+  }
+
+  /* ════════════════════════════════════════════════════
+     WORD SCRAMBLE
+     ════════════════════════════════════════════════════ */
+  .scramble-section {
+    margin-bottom: 8px;
+  }
+  .scramble-section h3 {
+    font-size: 11pt;
+    color: #8B1A1A;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .scramble-prompt {
+    font-size: 9pt;
+    color: #6B5040;
+    font-style: italic;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+  .scramble-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .scramble-num {
+    width: 24px;
+    font-weight: bold;
+    color: #8B1A1A;
+    font-size: 10pt;
+    vertical-align: middle;
+    padding: 6px 4px;
+  }
+  .scramble-clue {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11pt;
+    font-weight: bold;
+    color: #3D2B1F;
+    letter-spacing: 3px;
+    vertical-align: middle;
+    padding: 6px 8px;
+    width: 40%;
+  }
+  .scramble-answer {
+    vertical-align: middle;
+    padding: 6px 4px;
+  }
+  .scramble-blank {
+    display: inline-block;
+    width: 18px;
+    height: 1px;
+    border-bottom: 1.5pt solid #3D2B1F;
+    margin: 0 2px 0 2px;
+    vertical-align: bottom;
+  }
+  .scramble-circled {
+    border-bottom-color: #8B1A1A;
+    position: relative;
+  }
+  .scramble-circled::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: -2px;
+    right: -2px;
+    top: -14px;
+    border: 1pt solid #8B1A1A;
+    border-radius: 50%;
+  }
+  .scramble-secret {
+    margin-top: 18px;
+    text-align: center;
+    padding-top: 12px;
+    border-top: 0.5pt solid #D4C4A8;
+  }
+  .scramble-secret-label {
+    font-weight: bold;
+    font-size: 10pt;
+    color: #8B1A1A;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  .scramble-secret-blanks {
+    display: inline-block;
+  }
+  .scramble-secret-space {
+    display: inline-block;
+    width: 12px;
+  }
+
+  /* ════════════════════════════════════════════════════
+     COVER PAGE
+     ════════════════════════════════════════════════════ */
+  .cover-page {
+    text-align: center;
+    padding-top: 1.2in;
+  }
+  .cover-org {
+    font-size: 10pt;
+    color: #8B7355;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .cover-vbs-label {
+    font-size: 11pt;
+    color: #C5961A;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .cover-title {
+    font-size: 44pt;
+    font-weight: bold;
+    color: #8B1A1A;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    font-family: Georgia, serif;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .cover-subtitle {
+    font-size: 12pt;
+    color: #C5961A;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+  }
+  .cover-rule {
+    width: 40%;
+    height: 1.5pt;
+    background: #C5961A;
+    margin: 0 auto 30px;
+  }
+  .cover-verse {
+    width: 65%;
+    margin: 0 auto 50px;
+    font-size: 10.5pt;
+    line-height: 1.8;
+    color: #5C3D2E;
+    font-style: italic;
+  }
+  .cover-verse strong {
+    color: #8B1A1A;
+    font-style: normal;
+  }
+  .cover-details {
+    font-size: 9pt;
+    color: #8B7355;
+    letter-spacing: 1.5px;
+    line-height: 2;
+  }
+  .cover-bottom-rule {
+    width: 120px;
+    height: 0.5pt;
+    background: #C5961A;
+    margin: 40px auto 10px;
+  }
+  .cover-footer {
+    font-size: 8pt;
+    color: #A09080;
+    letter-spacing: 1px;
+  }
+
+  /* ════════════════════════════════════════════════════
+     LEVEL DIVIDER PAGE
+     ════════════════════════════════════════════════════ */
+  .level-divider {
+    text-align: center;
+    padding-top: 2.8in;
+  }
+  .level-divider-pre {
+    font-size: 9pt;
+    color: #C5961A;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .level-divider-num {
+    font-size: 48pt;
+    font-weight: bold;
+    color: #8B1A1A;
+    letter-spacing: 4px;
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+  .level-divider-audience {
+    font-size: 14pt;
+    color: #3D2B1F;
+    margin-top: 6px;
+    font-style: italic;
+  }
+  .level-divider-rule {
+    width: 80px;
+    height: 2pt;
+    background: #C5961A;
+    margin: 20px auto;
+  }
+  .level-divider-days {
+    font-size: 9pt;
+    color: #8B7355;
+    line-height: 2.2;
+    letter-spacing: 0.5px;
+  }
+
+  /* ════════════════════════════════════════════════════
+     ATTRIBUTION
+     ════════════════════════════════════════════════════ */
+  .attribution {
+    text-align: center;
+    font-size: 7pt;
+    color: #B0A090;
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+{{ content }}
+</body>
+</html>

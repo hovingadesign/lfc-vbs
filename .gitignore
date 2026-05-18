@@ -1,0 +1,39 @@
+# --- Secrets / env ---
+.infisical.json
+.env
+.env.*
+!.env.example
+
+# --- Machine-local config ---
+.claude/
+.forge/plugins/
+.forge/agent.md
+
+# --- Session logs / scratch notes ---
+knowledge/
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# --- Node / Tailwind build ---
+node_modules/
+package-lock.json
+site/node_modules/
+
+# --- Editor / OS ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# --- Intermediate / generated debug artifacts ---
+# Keep the final per-level + master PDFs, drop preview/debug PNGs and intermediate HTML
+output/*.png
+output/*.html
+assets/cache/

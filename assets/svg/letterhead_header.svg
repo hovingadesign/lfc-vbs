@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 120" width="720" height="120">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#1a0a05;stop-opacity:1"/>
+      <stop offset="40%" style="stop-color:#3D2B1F;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#5a3a28;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="goldShine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" style="stop-color:#D4A76A;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#C5961A;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#D4A76A;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="waveGradL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" style="stop-color:#1a5276;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:0.6"/>
+    </linearGradient>
+    <linearGradient id="waveGradR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" style="stop-color:#1a5276;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:0.6"/>
+    </linearGradient>
+    <linearGradient id="sandGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#D4A76A;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#C5961A;stop-opacity:0.6"/>
+    </linearGradient>
+    <linearGradient id="redGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#8B1A1A;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#6b1010;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="tabletGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#a0a0a0;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#808080;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#606060;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="pillarFire" x1="0.5" y1="1" x2="0.5" y2="0">
+      <stop offset="0%" style="stop-color:#C5961A;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#cc4400;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#8B1A1A;stop-opacity:0.6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="720" height="120" style="fill:url(#skyGrad);"/>
+
+  <!-- Top gold accent line -->
+  <rect x="0" y="0" width="720" height="3" style="fill:url(#goldShine);"/>
+
+  <!-- Desert/mountain silhouette along bottom -->
+  <path d="M0,110 L30,95 L60,100 L90,85 L120,92 L150,78 L180,88 L210,75 L240,82 L260,72 L280,80 L300,88 L320,92 L340,95 L360,98 L380,95 L400,92 L420,88 L440,80 L460,72 L480,82 L510,75 L540,88 L570,78 L600,92 L630,85 L660,100 L690,95 L720,110 L720,120 L0,120 Z" style="fill:url(#sandGrad);"/>
+
+  <!-- Distant mountain peaks -->
+  <path d="M140,95 L165,60 L175,70 L195,50 L215,70 L225,62 L245,90" style="fill:#2a1a10;opacity:0.5;"/>
+  <path d="M475,90 L500,62 L510,70 L525,50 L545,70 L555,60 L580,95" style="fill:#2a1a10;opacity:0.5;"/>
+
+  <!-- Mount Sinai center background silhouette -->
+  <path d="M310,98 L335,55 L350,65 L360,42 L370,65 L385,55 L410,98" style="fill:#2a1a10;opacity:0.3;"/>
+
+  <!-- LEFT PARTED WAVES -->
+  <!-- Wave wall left side -->
+  <path d="M0,45 Q20,40 35,50 Q50,60 40,72 Q30,84 15,88 Q5,90 0,92 Z" style="fill:url(#waveGradL);opacity:0.9;"/>
+  <path d="M0,35 Q25,28 45,38 Q60,48 55,62 Q48,76 30,82 Q12,86 0,85 Z" style="fill:#1a6a9a;opacity:0.7;"/>
+  <path d="M0,25 Q30,18 55,28 Q72,38 68,52 Q62,68 40,76 Q18,82 0,78 Z" style="fill:#2488b8;opacity:0.5;"/>
+  <!-- Wave crests left -->
+  <path d="M35,50 Q42,46 48,50 Q52,54 48,58" style="fill:none;stroke:#ffffff;stroke-width:1;opacity:0.4;"/>
+  <path d="M45,38 Q54,33 62,38 Q66,43 60,48" style="fill:none;stroke:#ffffff;stroke-width:1;opacity:0.3;"/>
+  <path d="M55,28 Q66,22 74,28 Q78,34 72,40" style="fill:none;stroke:#ffffff;stroke-width:0.8;opacity:0.25;"/>
+  <!-- Spray/foam left -->
+  <circle cx="42" cy="48" r="1.5" style="fill:#ffffff;opacity:0.3;"/>
+  <circle cx="55" cy="36" r="1" style="fill:#ffffff;opacity:0.25;"/>
+  <circle cx="65" cy="26" r="1.2" style="fill:#ffffff;opacity:0.2;"/>
+
+  <!-- RIGHT PARTED WAVES -->
+  <path d="M720,45 Q700,40 685,50 Q670,60 680,72 Q690,84 705,88 Q715,90 720,92 Z" style="fill:url(#waveGradR);opacity:0.9;"/>
+  <path d="M720,35 Q695,28 675,38 Q660,48 665,62 Q672,76 690,82 Q708,86 720,85 Z" style="fill:#1a6a9a;opacity:0.7;"/>
+  <path d="M720,25 Q690,18 665,28 Q648,38 652,52 Q658,68 680,76 Q702,82 720,78 Z" style="fill:#2488b8;opacity:0.5;"/>
+  <!-- Wave crests right -->
+  <path d="M685,50 Q678,46 672,50 Q668,54 672,58" style="fill:none;stroke:#ffffff;stroke-width:1;opacity:0.4;"/>
+  <path d="M675,38 Q666,33 658,38 Q654,43 660,48" style="fill:none;stroke:#ffffff;stroke-width:1;opacity:0.3;"/>
+  <path d="M665,28 Q654,22 646,28 Q642,34 648,40" style="fill:none;stroke:#ffffff;stroke-width:0.8;opacity:0.25;"/>
+  <!-- Spray/foam right -->
+  <circle cx="678" cy="48" r="1.5" style="fill:#ffffff;opacity:0.3;"/>
+  <circle cx="665" cy="36" r="1" style="fill:#ffffff;opacity:0.25;"/>
+  <circle cx="655" cy="26" r="1.2" style="fill:#ffffff;opacity:0.2;"/>
+
+  <!-- DRY PATH through the sea (lighter ground between waves) -->
+  <path d="M80,110 Q85,95 90,85 Q100,70 120,65 Q160,55 200,55 Q240,56 280,58 Q320,60 360,60 Q400,60 440,58 Q480,56 520,55 Q560,55 600,65 Q620,70 630,85 Q635,95 640,110" style="fill:none;stroke:#D4A76A;stroke-width:0.5;opacity:0.3;"/>
+
+  <!-- STAFF/ROD OF MOSES - left of center -->
+  <line x1="155" y1="18" x2="155" y2="105" style="stroke:#5a3215;stroke-width:3.5;stroke-linecap:round;"/>
+  <line x1="155" y1="18" x2="155" y2="105" style="stroke:#7a4a25;stroke-width:2;stroke-linecap:round;"/>
+  <!-- Staff hook/crook at top -->
+  <path d="M155,18 Q155,10 160,8 Q166,6 168,12" style="fill:none;stroke:#5a3215;stroke-width:3;stroke-linecap:round;"/>
+  <path d="M155,18 Q155,11 159,9 Q164,7 166,12" style="fill:none;stroke:#7a4a25;stroke-width:1.5;stroke-linecap:round;"/>
+  <!-- Staff wood grain -->
+  <line x1="154" y1="35" x2="156" y2="40" style="stroke:#4a2810;stroke-width:0.5;opacity:0.5;"/>
+  <line x1="156" y1="55" x2="154" y2="62" style="stroke:#4a2810;stroke-width:0.5;opacity:0.5;"/>
+  <line x1="154" y1="78" x2="156" y2="85" style="stroke:#4a2810;stroke-width:0.5;opacity:0.5;"/>
+
+  <!-- TABLETS OF THE LAW - right of center -->
+  <!-- Left tablet -->
+  <rect x="548" y="22" width="22" height="30" rx="4" ry="4" style="fill:url(#tabletGrad);stroke:#505050;stroke-width:0.8;"/>
+  <!-- Right tablet -->
+  <rect x="573" y="22" width="22" height="30" rx="4" ry="4" style="fill:url(#tabletGrad);stroke:#505050;stroke-width:0.8;"/>
+  <!-- Roman numerals / lines on tablets -->
+  <line x1="553" y1="30" x2="565" y2="30" style="stroke:#3D2B1F;stroke-width:0.7;"/>
+  <line x1="553" y1="34" x2="565" y2="34" style="stroke:#3D2B1F;stroke-width:0.7;"/>
+  <line x1="553" y1="38" x2="565" y2="38" style="stroke:#3D2B1F;stroke-width:0.7;"/>
+  <line x1="553" y1="42" x2="565" y2="42" style="stroke:#3D2B1F;stroke-width:0.7;"/>
+  <line x1="553" y1="46" x2="562" y2="46" style="stroke:#3D2B1F;stroke-width:0.7;"/>
+  <line x1="578" y1="30" x2="590" y2="30" style="stroke:#3D2B1F;stroke-width:0.7;"/>
+  <line x1="578" y1="34" x2="590" y2="34" style="stroke:#3D2B1F;stroke-width:0.7;"/>
+  <line x1="578" y1="38" x2="590" y2="38" style="stroke:#3D2B1F;stroke-width:0.7;"/>
+  <line x1="578" y1="42" x2="590" y2="42" style="stroke:#3D2B1F;stroke-width:0.7;"/>
+  <line x1="578" y1="46" x2="587" y2="46" style="stroke:#3D2B1F;stroke-width:0.7;"/>
+  <!-- Tablet glow -->
+  <rect x="548" y="22" width="22" height="30" rx="4" ry="4" style="fill:#C5961A;opacity:0.08;"/>
+  <rect x="573" y="22" width="22" height="30" rx="4" ry="4" style="fill:#C5961A;opacity:0.08;"/>
+
+  <!-- PILLAR OF FIRE - small, above staff -->
+  <ellipse cx="155" cy="8" rx="5" ry="4" style="fill:url(#pillarFire);opacity:0.7;"/>
+  <ellipse cx="155" cy="5" rx="3" ry="3" style="fill:#C5961A;opacity:0.5;"/>
+  <ellipse cx="155" cy="3" rx="1.5" ry="2" style="fill:#ffcc44;opacity:0.4;"/>
+
+  <!-- MAIN TEXT: "LFC VBS 2026" -->
+  <text x="360" y="28" style="font-family:'Georgia','Times New Roman',serif;font-size:14px;font-weight:bold;fill:#D4A76A;text-anchor:middle;letter-spacing:4px;">LFC VBS 2026</text>
+
+  <!-- THEME TITLE: "DELIVERANCE" -->
+  <text x="360" y="68" style="font-family:'Georgia','Times New Roman',serif;font-size:38px;font-weight:bold;fill:url(#goldShine);text-anchor:middle;letter-spacing:6px;">DELIVERANCE</text>
+  <!-- Title shadow for depth -->
+  <text x="361" y="69" style="font-family:'Georgia','Times New Roman',serif;font-size:38px;font-weight:bold;fill:#1a0a05;text-anchor:middle;letter-spacing:6px;opacity:0.3;">DELIVERANCE</text>
+  <!-- Title foreground (layered for richness) -->
+  <text x="360" y="68" style="font-family:'Georgia','Times New Roman',serif;font-size:38px;font-weight:bold;fill:#C5961A;text-anchor:middle;letter-spacing:6px;">DELIVERANCE</text>
+
+  <!-- Decorative lines flanking the title -->
+  <line x1="170" y1="58" x2="235" y2="58" style="stroke:#C5961A;stroke-width:1;opacity:0.6;"/>
+  <line x1="485" y1="58" x2="545" y2="58" style="stroke:#C5961A;stroke-width:1;opacity:0.6;"/>
+  <!-- Small diamond accents -->
+  <polygon points="167,58 170,55 173,58 170,61" style="fill:#C5961A;opacity:0.6;"/>
+  <polygon points="545,58 548,55 551,58 548,61" style="fill:#C5961A;opacity:0.6;"/>
+
+  <!-- SUBTITLE: "Exodus, Law, Tabernacle" -->
+  <text x="360" y="88" style="font-family:'Georgia','Times New Roman',serif;font-size:13px;fill:#D4A76A;text-anchor:middle;letter-spacing:3px;font-style:italic;">Exodus  ~  Law  ~  Tabernacle</text>
+
+  <!-- Bottom gold accent line -->
+  <rect x="0" y="117" width="720" height="3" style="fill:url(#goldShine);"/>
+
+  <!-- Thin inner border lines -->
+  <line x1="100" y1="100" x2="620" y2="100" style="stroke:#C5961A;stroke-width:0.5;opacity:0.3;"/>
+
+  <!-- Small decorative wave motif bottom center -->
+  <path d="M340,108 Q345,104 350,108 Q355,112 360,108 Q365,104 370,108 Q375,112 380,108" style="fill:none;stroke:#2980b9;stroke-width:1;opacity:0.4;"/>
+</svg>

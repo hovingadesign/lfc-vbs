@@ -1,0 +1,110 @@
+# LFC VBS 2026 "Deliverance" -- Print-Ready PDF Generator
+
+## Sub-Agent Delegation Protocol
+
+Opus handles planning, contract writing, and synthesis. Sub-agents handle execution.
+Full protocol — three-tier decision, contract template, model selection, parallel rules — lives in the
+`/agent-orchestration` global skill.
+
+## What This Is
+
+A Python-based generator that produces print-ready PDF worksheets for Little Farms Chapel's 2026 Vacation Bible School. The theme is "Deliverance" covering Exodus (Slavery, Plagues, Passover/Red Sea). It outputs a master PDF and per-level PDFs for all 4 levels across 3 days.
+
+## How to Run
+
+```bash
+python3 generate.py
+```
+Outputs go to `output/`. Takes ~30 seconds. Requires `weasyprint` and `jinja2`.
+
+## Project Structure
+
+```
+generate.py          -- Main script: assembles HTML pages and renders PDFs via WeasyPrint
+wordsearch.py        -- Puzzle generators: word search, crossword, word scramble
+fetch_coloring_pages.py -- One-time script to download coloring page images (legacy, see below)
+data/content.json    -- All curriculum content: days, scriptures, activities, words, clues
+templates/base.html  -- Single HTML/CSS template (all styles inline, WeasyPrint-compatible)
+assets/coloring/     -- Coloring page images (PNG/JPG), AI-generated via Nano Banana
+assets/svg/          -- SVG artwork (not all used currently)
+assets/cache/        -- Intermediate processed images from legacy fetch script
+output/              -- Generated HTML + PDFs
+```
+
+## Architecture
+
+### Levels & Days
+
+- **Level 1** (Ages 3-K): Drawing + Coloring pages. Each day shows "Introduce" scripture reference and a Key Concept on the drawing page.
+- **Level 2** (Elementary): Drawing + Coloring pages. Same "Introduce" + Key Concept format as Level 1 (shared key concepts).
+- **Level 3** (Older Elementary): Worksheet + Puzzle pages (word search day 1, crossword day 2, scramble day 3) + answer keys. Has its own deeper key concepts.
+- **Level 4** (Youth/Adult): Worksheet + Discussion + Puzzle pages (same puzzle types as L3 but harder words) + answer keys. Shares L3's key concepts plus has discussion questions.
+
+### Key Concepts
+
+- **Levels 1-2** share the same key concepts (simple summaries of each day's passage).
+- **Levels 3-4** share the same key concepts (deeper theological concepts).
+- L1-2 key concepts appear on the drawing page. L3-4 key concepts appear on the worksheet page.
+
+### Page Generation Flow
+
+`generate.py:generate_all()` iterates levels/days, calls page-maker functions that return HTML strings. All pages are concatenated into a single HTML document, then `base.html`'s `{{ content }}` placeholder is replaced and rendered to PDF.
+
+### Puzzle Generation (`wordsearch.py`)
+
+- `generate_wordsearch()` -- Grid-based word search with 8 directions, random fill
+- `generate_crossword()` -- Criss-cross puzzle. Greedy placement: tries all remaining words at each step, picks best fit (most intersections, most compact). Proper adjacency checking rejects parallel neighbors. Runs up to 500 attempts keeping best result.
+- `generate_scramble()` -- Word scramble with secret message (circled letters spell a phrase). Uses `_match_words_to_secret()` to reorder words via greedy most-constrained-first matching so each secret-message letter maps to a word that actually contains it.
+
+### Content Data (`data/content.json`)
+
+Structure: `levels[] > days[] > activities{}`. Day-level fields:
+- `reading`: "Introduce ..." (L1-2) or "Read ..." (L3-4)
+- `key_concept`: single string (used on days with one concept)
+- `key_concepts`: array of strings (used on days with multiple concepts)
+- `catechism_qa`: array of {q_num, question, answer} (L3-4 only)
+- `discussion_questions`: array of strings (L4 only)
+
+Activity types:
+- `wordsearch`: `{prompt, words[]}`
+- `crossword`: `{prompt, words[], clues{}}` -- clues maps WORD -> hint string
+- `scramble`: `{prompt, words[], secret_message}`
+- `drawing/coloring`: `{prompt, instruction}`
+- `list`: `{prompt}`
+
+### CSS / Styling
+
+All CSS lives in `templates/base.html`. WeasyPrint-compatible (no flexbox/grid for layout -- uses `display: table/table-cell` instead). Color scheme: deep red (#8B1A1A), gold (#C5961A), parchment tones. Letter-size pages with 0.5in/0.65in margins.
+
+Two drawing area sizes: `.drawing-area` (7in, full page) and `.drawing-area-short` (5.2in, used when key concept is shown above).
+
+Page numbers are rendered in the bottom-right corner via WeasyPrint's `@page @bottom-right` margin box, matching the footer text style. The title page is excluded using `@page :first`.
+
+## Key Design Decisions
+
+- Crossword puzzle pages show **clue hints** (from the `clues` dict) in the Across/Down lists, plus a **word bank** below. Answer keys show the actual **words** in the Across/Down lists.
+- Crossword generator uses greedy best-fit (not random shuffle) with strict adjacency rules: non-intersection cells reject any parallel neighbors, and cells before/after words must be empty.
+- Word search pages have no answer key (by design). Crossword and scramble pages do.
+- The `make_puzzle_page()` dispatcher selects puzzle type by day number: day 1 = word search, day 2 = crossword, day 3 = scramble.
+
+## Coloring Page Images
+
+Located in `assets/coloring/`. AI-generated via Nano Banana for consistent quality and age-appropriate content. Mapped to (level, day) pairs via `IMG_MAP_COLORING` dict in `generate.py`:
+
+| Key | Filename | Subject |
+|-----|----------|---------|
+| (1,1) | moses_staff | Moses holding his staff |
+| (1,2) | nile_blood | The Nile turning to blood |
+| (1,3) | red_sea_parting | The Red Sea parting |
+| (2,1) | moses_pharaoh | Moses confronting Pharaoh |
+| (2,2) | hail_egypt | The ten plagues of Egypt (composite scene) |
+| (2,3) | red_sea_crossing | Israelites crossing the Red Sea (front-facing perspective, pillar of fire behind) |
+
+Only levels 1-2 have coloring pages. If an image file is missing, a dashed-border placeholder SVG is rendered instead. Images can be PNG or JPG (any extension is auto-detected).
+
+## Extending
+
+- To add a new day or level: add entries to `data/content.json`, then add page-building logic in `_build_level_pages()` if needed.
+- To add a new puzzle type: implement generator in `wordsearch.py`, add page renderer in `generate.py`, add dispatch in `make_puzzle_page()`.
+- To change styling: edit `templates/base.html` CSS. Remember WeasyPrint limitations (no CSS grid, limited flexbox).
+- To replace coloring images: drop new files in `assets/coloring/` with matching filenames (any image extension works).

@@ -1,0 +1,395 @@
+{
+  "title": "Little Farms Chapel VBS 2026: Deliverance",
+  "subtitle": "Exodus, Law, Tabernacle",
+  "year": 2026,
+  "theme": "Deliverance",
+  "levels": [
+    {
+      "level": 1,
+      "audience": "Ages 3 - Kindergarten",
+      "days": [
+        {
+          "day": 1,
+          "title": "Slavery",
+          "scripture": "Ex. 3; 6:1-13; 7:10-13",
+          "reading": "Introduce Ex. 3; 6:1-13; 7:10-13",
+          "key_concept": "The people of God were enslaved to Pharaoh in Egypt. God told Moses and Aaron to tell Pharaoh to let His people go so that they would serve and worship God. They told Pharaoh, but he would not listen.",
+          "activities": {
+            "drawing": {
+              "prompt": "Bricks and Straw",
+              "instruction": "Draw some bricks and straw that the slaves used to build for Pharaoh!"
+            },
+            "coloring": {
+              "prompt": "Moses' Staff",
+              "instruction": "Color Moses' staff that God used to show His power!"
+            }
+          }
+        },
+        {
+          "day": 2,
+          "title": "The Plagues",
+          "scripture": "Ex. 7-11",
+          "reading": "Introduce Ex. 7-11",
+          "key_concept": "God sent 10 plagues on Egypt. Every time Pharaoh refused to listen, God sent another plague. God worked through Moses and Aaron, and turned the Nile into blood, sent frogs, lice, and flies, killed the livestock, sent boils, hail, locusts, and finally, killed the firstborn of Egypt.",
+          "activities": {
+            "drawing": {
+              "prompt": "Bugs God Sent",
+              "instruction": "Draw one of the bugs that God sent as a plague on Egypt!"
+            },
+            "coloring": {
+              "prompt": "The Nile Turning to Blood",
+              "instruction": "Color the Nile River as it turns from blue water to red blood!"
+            }
+          }
+        },
+        {
+          "day": 3,
+          "title": "The Passover and Red Sea Crossing",
+          "scripture": "Ex. 12-14",
+          "reading": "Introduce Ex. 12-14",
+          "key_concept": "God told the Israelites to sacrifice a lamb and mark their doorposts with its blood to save them from the last plague, pointing forward to the sacrifice of God's Son, Jesus, for sin. Then, God parted the Red Sea and the people crossed over on dry ground to safety to worship and serve God as His delivered people.",
+          "activities": {
+            "drawing": {
+              "prompt": "The Doorposts",
+              "instruction": "Draw the doorposts marked with the blood of the lamb!"
+            },
+            "coloring": {
+              "prompt": "The Red Sea Parting",
+              "instruction": "Color the Red Sea as God parts the waters for His people!"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "audience": "Elementary",
+      "days": [
+        {
+          "day": 1,
+          "title": "Slavery",
+          "scripture": "Ex. 3; 6:1-13; 7:10-13",
+          "reading": "Introduce Ex. 3; 6:1-13; 7:10-13",
+          "key_concept": "The people of God were enslaved to Pharaoh in Egypt. God told Moses and Aaron to tell Pharaoh to let His people go so that they would serve and worship God. They told Pharaoh, but he would not listen.",
+          "activities": {
+            "drawing": {
+              "prompt": "The Slaves at Work",
+              "instruction": "Draw what work the slaves were doing in Egypt."
+            },
+            "coloring": {
+              "prompt": "Moses Confronting Pharaoh",
+              "instruction": "Color the scene of Moses standing before Pharaoh and telling him to let God's people go!"
+            }
+          }
+        },
+        {
+          "day": 2,
+          "title": "The Plagues",
+          "scripture": "Ex. 7-11",
+          "reading": "Introduce Ex. 7-11",
+          "key_concept": "God sent 10 plagues on Egypt. Every time Pharaoh refused to listen, God sent another plague. God worked through Moses and Aaron, and turned the Nile into blood, sent frogs, lice, and flies, killed the livestock, sent boils, hail, locusts, and finally, killed the firstborn of Egypt.",
+          "activities": {
+            "drawing": {
+              "prompt": "The Plagues of Egypt",
+              "instruction": "Draw one thing from all of the plagues that God sent on Egypt."
+            },
+            "coloring": {
+              "prompt": "Hail Falling on Egypt",
+              "instruction": "Color the hail falling down on the land of Egypt!"
+            }
+          }
+        },
+        {
+          "day": 3,
+          "title": "The Passover and Red Sea Crossing",
+          "scripture": "Ex. 12-14",
+          "reading": "Introduce Ex. 12-14",
+          "key_concept": "God told the Israelites to sacrifice a lamb and mark their doorposts with its blood to save them from the last plague, pointing forward to the sacrifice of God's Son, Jesus, for sin. Then, God parted the Red Sea and the people crossed over on dry ground to safety to worship and serve God as His delivered people.",
+          "activities": {
+            "drawing": {
+              "prompt": "The Passover Meal",
+              "instruction": "Draw the Israelites having the Passover meal."
+            },
+            "coloring": {
+              "prompt": "The Red Sea Crossing",
+              "instruction": "Color the Israelites crossing through the Red Sea on dry ground!"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "audience": "Older Elementary",
+      "days": [
+        {
+          "day": 1,
+          "title": "Slavery",
+          "scripture": "Ex. 3; 6:1-13; 7:10-13",
+          "reading": "Read Ex. 3; 6:1-13; 7:10-13",
+          "key_concept": "God kept His covenant and was true to His promises in saving His people both spiritually from sin and physically from Egypt.",
+          "catechism": ["WSC 20", "WSC 21"],
+          "catechism_qa": [
+            {
+              "q_num": 20,
+              "question": "Did God leave all mankind to perish in the estate of sin and misery?",
+              "answer": "God having, out of his mere good pleasure, from all eternity, elected some to everlasting life, did enter into a covenant of grace, to deliver them out of the estate of sin and misery, and to bring them into an estate of salvation by a Redeemer."
+            },
+            {
+              "q_num": 21,
+              "question": "Who is the Redeemer of God's elect?",
+              "answer": "The only Redeemer of God's elect is the Lord Jesus Christ, who, being the eternal Son of God, became man, and so was, and continueth to be, God and man in two distinct natures, and one person, forever."
+            }
+          ],
+          "activities": {
+            "list": {
+              "prompt": "List the sequence of events which God says He will do to deliver His people."
+            },
+            "wordsearch": {
+              "prompt": "Find the words for God's call of Moses and what He told Him.",
+              "words": ["MOSES", "AARON", "BURNING", "BUSH", "HOLY", "GROUND", "COVENANT", "ABRAHAM", "ISAAC", "JACOB", "PHARAOH", "EGYPT", "DELIVER", "PROMISED", "STAFF", "SERPENT", "SIGNS", "WONDERS"]
+            }
+          }
+        },
+        {
+          "day": 2,
+          "title": "The Plagues",
+          "scripture": "Ex. 7-11",
+          "reading": "Read Ex. 7-11",
+          "key_concepts": [
+            "God gives over to sin those who do not repent.",
+            "God sends judgements on those who are hard of heart.",
+            "God spiritually protects those whom He has effectually called and justified."
+          ],
+          "catechism": ["WSC 19", "WSC 31"],
+          "catechism_qa": [
+            {
+              "q_num": 19,
+              "question": "What is the misery of that estate whereinto man fell?",
+              "answer": "All mankind by their fall lost communion with God, are under his wrath and curse, and so made liable to all miseries in this life, to death itself, and to the pains of hell forever."
+            },
+            {
+              "q_num": 31,
+              "question": "What is effectual calling?",
+              "answer": "Effectual calling is the work of God's Spirit, whereby, convincing us of our sin and misery, enlightening our minds in the knowledge of Christ, and renewing our wills, he doth persuade and enable us to embrace Jesus Christ, freely offered to us in the gospel."
+            }
+          ],
+          "activities": {
+            "list": {
+              "prompt": "List the plagues in order along with their effects on Egypt."
+            },
+            "wordsearch": {
+              "prompt": "Find the words of all the plagues.",
+              "words": ["BLOOD", "FROGS", "LICE", "FLIES", "LIVESTOCK", "BOILS", "HAIL", "LOCUSTS", "DARKNESS", "FIRSTBORN", "PHARAOH", "PLAGUE", "MOSES", "AARON", "HARDENED", "HEART", "JUDGEMENT", "REPENT"]
+            },
+            "crossword": {
+              "prompt": "Fit these plague words into the crossword grid!",
+              "words": ["BLOOD", "FROGS", "LICE", "FLIES", "BOILS", "HAIL", "LOCUSTS", "DARKNESS", "FIRSTBORN", "PHARAOH", "PLAGUE", "MOSES", "HARDENED", "HEART"],
+              "clues": {
+                "BLOOD": "The first plague turned the Nile to this",
+                "FROGS": "These hoppy creatures covered all of Egypt",
+                "LICE": "Tiny biting insects from the dust of the earth",
+                "FLIES": "Swarms of these buzzing insects filled Egypt",
+                "BOILS": "Painful sores that broke out on skin",
+                "HAIL": "Frozen rain mixed with fire fell from the sky",
+                "LOCUSTS": "These insects ate every plant in the land",
+                "DARKNESS": "Three days of this covered Egypt",
+                "FIRSTBORN": "The tenth plague struck every ___ in Egypt",
+                "PHARAOH": "The stubborn king of Egypt",
+                "PLAGUE": "A terrible disaster sent by God",
+                "MOSES": "God's messenger who said 'Let my people go'",
+                "HARDENED": "Pharaoh ___ his heart and would not listen",
+                "HEART": "The part of Pharaoh that was stubborn"
+              }
+            }
+          }
+        },
+        {
+          "day": 3,
+          "title": "The Passover and Red Sea Crossing",
+          "scripture": "Ex. 12-14",
+          "reading": "Read Ex. 12-14",
+          "key_concepts": [
+            "The passover lamb was given to point their faith in the coming sacrifice of the Son of God.",
+            "God spiritually delivers those He has justified and makes them persevere."
+          ],
+          "catechism": ["WSC 32", "WSC 36"],
+          "catechism_qa": [
+            {
+              "q_num": 32,
+              "question": "What benefits do they that are effectually called partake of in this life?",
+              "answer": "They that are effectually called do in this life partake of justification, adoption, and sanctification, and the several benefits which in this life do either accompany or flow from them."
+            },
+            {
+              "q_num": 36,
+              "question": "What are the benefits which in this life do accompany or flow from justification, adoption, and sanctification?",
+              "answer": "The benefits which in this life do accompany or flow from justification, adoption, and sanctification, are, assurance of God's love, peace of conscience, joy in the Holy Ghost, increase of grace, and perseverance therein to the end."
+            }
+          ],
+          "activities": {
+            "list": {
+              "prompt": "List out all of God's instructions for leaving Egypt."
+            },
+            "wordsearch": {
+              "prompt": "Find the words of Passover and Red Sea.",
+              "words": ["PASSOVER", "LAMB", "BLOOD", "DOORPOST", "FIRSTBORN", "UNLEAVENED", "BREAD", "HYSSOP", "MIDNIGHT", "REDSEA", "PARTED", "DRYGROUND", "PILLAR", "CLOUD", "FIRE", "PHARAOH", "CHARIOTS", "DELIVER"]
+            },
+            "scramble": {
+              "prompt": "Unscramble these words from the Passover and Red Sea Crossing! The circled letters spell a secret message.",
+              "words": ["PASSOVER", "LAMB", "BLOOD", "DOORPOST", "FIRSTBORN", "UNLEAVENED", "BREAD", "HYSSOP", "MIDNIGHT", "REDSEA", "PILLAR", "DELIVER"],
+              "secret_message": "GOD DELIVERS"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "audience": "Youth / Adult",
+      "days": [
+        {
+          "day": 1,
+          "title": "Slavery",
+          "scripture": "Ex. 3; 6:1-13; 7:10-13",
+          "reading": "Read Ex. 3; 6:1-13; 7:10-13",
+          "key_concept": "God kept His covenant and was true to His promises in saving His people both spiritually from sin and physically from Egypt.",
+          "catechism": ["WSC 20", "WSC 21"],
+          "catechism_qa": [
+            {
+              "q_num": 20,
+              "question": "Did God leave all mankind to perish in the estate of sin and misery?",
+              "answer": "God having, out of his mere good pleasure, from all eternity, elected some to everlasting life, did enter into a covenant of grace, to deliver them out of the estate of sin and misery, and to bring them into an estate of salvation by a Redeemer."
+            },
+            {
+              "q_num": 21,
+              "question": "Who is the Redeemer of God's elect?",
+              "answer": "The only Redeemer of God's elect is the Lord Jesus Christ, who, being the eternal Son of God, became man, and so was, and continueth to be, God and man in two distinct natures, and one person, forever."
+            }
+          ],
+          "discussion_questions": [
+            "What is a covenant and what covenant was God referring to when He introduced Himself as the God of their fathers?",
+            "Why were the people of God sent into slavery, and what does it spiritually symbolize?",
+            "What do you think God meant by remembering His covenant with His people?",
+            "Why did God send Aaron with Moses and what is the warning for us in God's reply to Moses?",
+            "How was God reinforcing the point that faith is needed to be saved and that God Himself must spiritually deliver them?"
+          ],
+          "activities": {
+            "list": {
+              "prompt": "List the sequence of events which God says He will do to deliver His people."
+            },
+            "wordsearch": {
+              "prompt": "Find the words for God's call of Moses and what He told Him.",
+              "words": ["MOSES", "AARON", "BURNING", "BUSH", "HOLY", "GROUND", "COVENANT", "ABRAHAM", "ISAAC", "JACOB", "PHARAOH", "EGYPT", "DELIVER", "PROMISED", "STAFF", "SERPENT", "SIGNS", "WONDERS", "REDEEMER", "ELECT"]
+            }
+          }
+        },
+        {
+          "day": 2,
+          "title": "The Plagues",
+          "scripture": "Ex. 7-11",
+          "reading": "Read Ex. 7-11",
+          "key_concepts": [
+            "God gives over to sin those who do not repent.",
+            "God sends judgements on those who are hard of heart.",
+            "God spiritually protects those whom He has effectually called and justified."
+          ],
+          "catechism": ["WSC 19", "WSC 31"],
+          "catechism_qa": [
+            {
+              "q_num": 19,
+              "question": "What is the misery of that estate whereinto man fell?",
+              "answer": "All mankind by their fall lost communion with God, are under his wrath and curse, and so made liable to all miseries in this life, to death itself, and to the pains of hell forever."
+            },
+            {
+              "q_num": 31,
+              "question": "What is effectual calling?",
+              "answer": "Effectual calling is the work of God's Spirit, whereby, convincing us of our sin and misery, enlightening our minds in the knowledge of Christ, and renewing our wills, he doth persuade and enable us to embrace Jesus Christ, freely offered to us in the gospel."
+            }
+          ],
+          "discussion_questions": [
+            "What does it mean that God hardened Pharaoh's heart, and how is unbelief a serious sin?",
+            "How does God set a difference between His people and the Egyptians and why?",
+            "What does Moses say was the reason for God commanding Pharaoh to let His people go?",
+            "Why were so many of the plagues natural disasters and how was God judging their pagan beliefs?",
+            "What was the significance of God raining fire and sending darkness in all the land?"
+          ],
+          "activities": {
+            "list": {
+              "prompt": "List the plagues in order along with their effects on Egypt."
+            },
+            "wordsearch": {
+              "prompt": "Find the words of all the plagues.",
+              "words": ["BLOOD", "FROGS", "LICE", "FLIES", "LIVESTOCK", "BOILS", "HAIL", "LOCUSTS", "DARKNESS", "FIRSTBORN", "PHARAOH", "PLAGUE", "MOSES", "AARON", "HARDENED", "HEART", "JUDGEMENT", "REPENT", "SOVEREIGN", "WRATH"]
+            },
+            "crossword": {
+              "prompt": "Fit these plague words into the crossword grid!",
+              "words": ["BLOOD", "FROGS", "LICE", "FLIES", "BOILS", "HAIL", "LOCUSTS", "DARKNESS", "FIRSTBORN", "PHARAOH", "PLAGUE", "MOSES", "HARDENED", "HEART", "SOVEREIGN", "WRATH"],
+              "clues": {
+                "BLOOD": "The Nile was turned to this in the first plague",
+                "FROGS": "The second plague sent swarms of these from the river",
+                "LICE": "Aaron struck the dust to bring this third plague",
+                "FLIES": "The fourth plague — but Goshen was spared from these",
+                "BOILS": "Sixth plague: painful sores from furnace ashes",
+                "HAIL": "Seventh plague: fire mingled with frozen rain",
+                "LOCUSTS": "Eighth plague: devoured every green thing",
+                "DARKNESS": "Ninth plague: three days of thick ___",
+                "FIRSTBORN": "The final plague struck every ___ of Egypt",
+                "PHARAOH": "Ruler whose stubbornness brought ruin on Egypt",
+                "PLAGUE": "Each of the ten disasters sent as judgment",
+                "MOSES": "Prophet who declared God's word to Egypt's king",
+                "HARDENED": "What Pharaoh did to his heart repeatedly",
+                "HEART": "Pharaoh's ___ was unyielding against God",
+                "SOVEREIGN": "God's supreme authority over all nations",
+                "WRATH": "God's righteous anger against sin and oppression"
+              }
+            }
+          }
+        },
+        {
+          "day": 3,
+          "title": "The Passover and Red Sea Crossing",
+          "scripture": "Ex. 12-14",
+          "reading": "Read Ex. 12-14",
+          "key_concepts": [
+            "The passover lamb was given to point their faith in the coming sacrifice of the Son of God.",
+            "God spiritually delivers those He has justified and makes them persevere."
+          ],
+          "catechism": ["WSC 32", "WSC 36"],
+          "catechism_qa": [
+            {
+              "q_num": 32,
+              "question": "What benefits do they that are effectually called partake of in this life?",
+              "answer": "They that are effectually called do in this life partake of justification, adoption, and sanctification, and the several benefits which in this life do either accompany or flow from them."
+            },
+            {
+              "q_num": 36,
+              "question": "What are the benefits which in this life do accompany or flow from justification, adoption, and sanctification?",
+              "answer": "The benefits which in this life do accompany or flow from justification, adoption, and sanctification, are, assurance of God's love, peace of conscience, joy in the Holy Ghost, increase of grace, and perseverance therein to the end."
+            }
+          ],
+          "discussion_questions": [
+            "What is the spiritual significance of marking the houses with the blood of the lamb?",
+            "What is the significance of the plague passing over the people of God?",
+            "Why did Pharaoh pursue the people after the last plague and what was God's purpose in it?",
+            "Why did God block the people with the Red Sea before opening it up before them?",
+            "What is the significance of dry ground for the Israelites and flood for the Egyptians?"
+          ],
+          "activities": {
+            "list": {
+              "prompt": "List out all of God's instructions for leaving Egypt."
+            },
+            "wordsearch": {
+              "prompt": "Find the words of Passover and Red Sea.",
+              "words": ["PASSOVER", "LAMB", "BLOOD", "DOORPOST", "FIRSTBORN", "UNLEAVENED", "BREAD", "HYSSOP", "MIDNIGHT", "REDSEA", "PARTED", "DRYGROUND", "PILLAR", "CLOUD", "FIRE", "PHARAOH", "CHARIOTS", "DELIVER", "JUSTIFIED", "SANCTIFIED"]
+            },
+            "scramble": {
+              "prompt": "Unscramble these words from the Passover and Red Sea Crossing! The circled letters spell a secret message.",
+              "words": ["PASSOVER", "LAMB", "BLOOD", "DOORPOST", "FIRSTBORN", "UNLEAVENED", "BREAD", "HYSSOP", "MIDNIGHT", "REDSEA", "PILLAR", "DELIVER", "JUSTIFIED", "SANCTIFIED"],
+              "secret_message": "GOD DELIVERS US"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

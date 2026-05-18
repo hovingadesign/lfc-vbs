@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 40" width="720" height="40">
+  <defs>
+    <linearGradient id="footGoldGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" style="stop-color:#D4A76A;stop-opacity:0"/>
+      <stop offset="20%" style="stop-color:#C5961A;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#D4A76A;stop-opacity:1"/>
+      <stop offset="80%" style="stop-color:#C5961A;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#D4A76A;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="footFlame" x1="0.5" y1="1" x2="0.5" y2="0">
+      <stop offset="0%" style="stop-color:#C5961A;stop-opacity:0.9"/>
+      <stop offset="60%" style="stop-color:#cc5500;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#8B1A1A;stop-opacity:0.4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Main horizontal line -->
+  <line x1="60" y1="10" x2="660" y2="10" style="stroke:url(#footGoldGrad);stroke-width:1.2;"/>
+
+  <!-- LEFT WAVE MOTIF -->
+  <path d="M80,10 Q88,4 96,10 Q104,16 112,10 Q120,4 128,10" style="fill:none;stroke:#2980b9;stroke-width:1.2;opacity:0.6;"/>
+  <!-- Wave foam dots -->
+  <circle cx="96" cy="6" r="0.8" style="fill:#5dade2;opacity:0.4;"/>
+  <circle cx="112" cy="6" r="0.6" style="fill:#5dade2;opacity:0.3;"/>
+
+  <!-- LEFT STAFF -->
+  <line x1="160" y1="4" x2="160" y2="16" style="stroke:#5a3215;stroke-width:2;stroke-linecap:round;"/>
+  <line x1="160" y1="4" x2="160" y2="16" style="stroke:#7a4a25;stroke-width:1;stroke-linecap:round;"/>
+
+  <!-- CENTER PILLAR OF FIRE / FLAME -->
+  <path d="M360,8 Q357,4 358,1 Q360,-2 362,1 Q363,4 360,8 Z" style="fill:url(#footFlame);opacity:0.7;"/>
+  <ellipse cx="360" cy="8" rx="3" ry="2" style="fill:#C5961A;opacity:0.25;"/>
+
+  <!-- RIGHT STAFF -->
+  <line x1="560" y1="4" x2="560" y2="16" style="stroke:#5a3215;stroke-width:2;stroke-linecap:round;"/>
+  <line x1="560" y1="4" x2="560" y2="16" style="stroke:#7a4a25;stroke-width:1;stroke-linecap:round;"/>
+
+  <!-- RIGHT WAVE MOTIF -->
+  <path d="M592,10 Q600,4 608,10 Q616,16 624,10 Q632,4 640,10" style="fill:none;stroke:#2980b9;stroke-width:1.2;opacity:0.6;"/>
+  <!-- Wave foam dots -->
+  <circle cx="608" cy="6" r="0.8" style="fill:#5dade2;opacity:0.4;"/>
+  <circle cx="624" cy="6" r="0.6" style="fill:#5dade2;opacity:0.3;"/>
+
+  <!-- Small diamond accents at line ends -->
+  <polygon points="60,10 63,7 66,10 63,13" style="fill:#C5961A;opacity:0.5;"/>
+  <polygon points="654,10 657,7 660,10 657,13" style="fill:#C5961A;opacity:0.5;"/>
+
+  <!-- CHURCH NAME -->
+  <text x="360" y="30" style="font-family:'Georgia','Times New Roman',serif;font-size:10px;fill:#3D2B1F;text-anchor:middle;letter-spacing:2px;">LIVING FAITH CHURCH</text>
+
+  <!-- Tiny decorative dots flanking church name -->
+  <circle cx="280" cy="28" r="1" style="fill:#C5961A;opacity:0.4;"/>
+  <circle cx="440" cy="28" r="1" style="fill:#C5961A;opacity:0.4;"/>
+
+  <!-- Bottom thin line -->
+  <line x1="140" y1="36" x2="580" y2="36" style="stroke:#C5961A;stroke-width:0.4;opacity:0.3;"/>
+</svg>
