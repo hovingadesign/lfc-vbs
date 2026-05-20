@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Deliverance — LFC VBS 2026 · Parade Handout</title>
+<meta name="description" content="4-up parade handout for Little Farms Chapel VBS 2026 (Deliverance). Print on 8.5x11 landscape, cut into 4 cards." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+
+<style>
+  :root {
+    --parchment-50:  #FBF5E3;
+    --parchment-100: #F5EBD0;
+    --parchment-200: #EBDDB3;
+    --parchment-300: #DEC893;
+    --ink-900: #1F1208;
+    --ink-800: #2A1A0F;
+    --ink-700: #3A2718;
+    --ink-600: #5C4633;
+    --ink-500: #7A6650;
+    --crimson-700: #8B1A1A;
+    --crimson-800: #6B1414;
+    --gold-600:    #C5961A;
+    --gold-500:    #D4A937;
+
+    --font-display: "Fraunces", ui-serif, Georgia, serif;
+    --font-body:    "Lora",    ui-serif, Georgia, serif;
+  }
+
+  /* ============================================================
+     PRINT-FIRST PAGE SETUP
+     8.5 x 11 landscape  →  11" wide × 8.5" tall
+     4 cards in a 2×2 grid, each 5.5" wide × 4.25" tall.
+     No bleed: cards tile edge-to-edge; print shop trims the
+     single vertical & single horizontal seam.
+     ============================================================ */
+  @page {
+    size: 11in 8.5in;
+    margin: 0;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--parchment-200);
+    color: var(--ink-900);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga", "kern", "onum";
+  }
+
+  /* The sheet — exactly 11in × 8.5in.
+     On-screen we center it; in print it occupies the page. */
+  .sheet {
+    width: 11in;
+    height: 8.5in;
+    background: var(--parchment-50);
+    display: grid;
+    grid-template-columns: 5.5in 5.5in;
+    grid-template-rows:    4.25in 4.25in;
+    margin: 24px auto;
+    box-shadow: 0 30px 80px -30px rgba(0,0,0,0.35);
+    position: relative;
+  }
+  @media print {
+    .sheet {
+      margin: 0;
+      box-shadow: none;
+    }
+    body { background: var(--parchment-50); }
+    .screen-hint { display: none !important; }
+  }
+
+  /* ============================================================
+     CUT GUIDES
+     Two seams: vertical @ 5.5in, horizontal @ 4.25in.
+     Hairline ticks at the page edges (just 0.15in long) — invisible
+     enough that we don't disrupt the design, visible enough that the
+     print shop's cutter can align without measuring.
+     ============================================================ */
+  .crop {
+    position: absolute;
+    background: var(--ink-500);
+    opacity: 0.5;
+  }
+  .crop-v-top    { left: 5.5in;  top: 0;       width: 0.5pt; height: 0.15in; transform: translateX(-0.25pt); }
+  .crop-v-bot    { left: 5.5in;  bottom: 0;    width: 0.5pt; height: 0.15in; transform: translateX(-0.25pt); }
+  .crop-h-left   { top: 4.25in;  left: 0;      height: 0.5pt; width: 0.15in; transform: translateY(-0.25pt); }
+  .crop-h-right  { top: 4.25in;  right: 0;     height: 0.5pt; width: 0.15in; transform: translateY(-0.25pt); }
+
+  /* ============================================================
+     CARD
+     5.5 × 4.25, generous internal safe-area so the design breathes
+     in from every cut edge.
+     ============================================================ */
+  .card {
+    position: relative;
+    padding: 0.36in 0.44in 0.34in 0.44in;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 1fr auto;   /* hero | footer */
+    row-gap: 0.12in;
+    isolation: isolate;
+  }
+
+  /* Paper-grain noise — same recipe as the landing page, scaled down */
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.45;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.15 0 0 0 0 0.1 0 0 0 0 0.05 0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  .card > * { position: relative; z-index: 1; }
+
+  /* -- HERO BLOCK ----------------------------------------------- */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 0.06in;
+  }
+
+  .eyebrow {
+    font-family: var(--font-display);
+    color: var(--crimson-700);
+    font-weight: 600;
+    font-size: 9pt;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    align-self: center;
+  }
+  .eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 5pt;
+    height: 5pt;
+    border-radius: 999px;
+    background: var(--crimson-700);
+  }
+
+  .title {
+    font-family: var(--font-display);
+    color: var(--ink-900);
+    font-weight: 600;
+    font-size: 27pt;
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+    font-variation-settings: "opsz" 96, "SOFT" 60;
+    margin: 0.02in 0 0;
+  }
+
+  .subtitle {
+    font-family: var(--font-display);
+    font-style: italic;
+    color: var(--ink-700);
+    font-size: 10.5pt;
+    line-height: 1.32;
+    margin-top: 0.02in;
+  }
+
+  /* -- THEME BOOKPLATE (replaces the old Roman-numeral divider) -- */
+  .theme {
+    margin: 0.06in auto 0;
+    text-align: center;
+    max-width: 3.2in;
+  }
+  .theme-rule {
+    display: flex;
+    align-items: center;
+    gap: 0.18in;
+    color: var(--gold-600);
+  }
+  .theme-rule::before,
+  .theme-rule::after {
+    content: "";
+    flex: 1;
+    height: 0.5pt;
+    background: linear-gradient(to right, transparent, var(--gold-600), transparent);
+  }
+  .theme-rule span {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 12.5pt;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink-900);
+  }
+  .theme-sub {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 10pt;
+    color: var(--ink-600);
+    margin-top: 2pt;
+    letter-spacing: 0.02em;
+  }
+
+  /* -- FOOTER (info on left, QR on right) ----------------------- */
+  .foot {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.22in;
+    align-items: center;
+    margin-top: 0.06in;
+  }
+
+  .info dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.2in;
+    row-gap: 0.06in;
+    align-items: baseline;
+  }
+  .info dt {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 8pt;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-500);
+    padding-top: 1pt;
+  }
+  .info dd {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 12.5pt;
+    color: var(--ink-900);
+    line-height: 1.18;
+  }
+  .info dd .sub {
+    display: block;
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 9pt;
+    color: var(--ink-600);
+    margin-top: 1pt;
+  }
+  .info dd .sub.italic { font-style: italic; }
+
+  /* QR */
+  .qr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.05in;
+  }
+  .qr .scan {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 7pt;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink-500);
+    margin-bottom: -0.02in;
+  }
+  .qr svg {
+    width: 1.25in;
+    height: 1.25in;
+    display: block;
+    border: 0.5pt solid var(--ink-800);
+    border-radius: 3pt;
+    background: var(--parchment-50);
+  }
+  .qr .url {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 9.5pt;
+    letter-spacing: 0.04em;
+    color: var(--ink-900);
+  }
+
+  /* On-screen helper hint above the sheet */
+  .screen-hint {
+    max-width: 11in;
+    margin: 32px auto 0;
+    padding: 14px 18px;
+    background: var(--parchment-50);
+    border: 1px solid var(--parchment-300);
+    border-radius: 10px;
+    font-family: var(--font-display);
+    font-size: 13px;
+    color: var(--ink-700);
+    line-height: 1.5;
+  }
+  .screen-hint b { color: var(--ink-900); }
+</style>
+</head>
+<body>
+
+<div class="screen-hint">
+  <b>Preview:</b> this page is sized for 11×8.5 landscape, 4-up. To export for the print shop:
+  open this in a browser, <b>File → Print → Destination: Save as PDF</b>, set <b>Layout: Landscape</b>,
+  <b>Paper: Letter</b>, <b>Margins: None</b>, and <b>Scale: 100%</b> (Chrome / Edge). Send the PDF to the print shop.
+</div>
+
+<!-- ========================================================
+     The 4-up sheet. One <article class="card"> repeated 4×.
+     ======================================================== -->
+<div class="sheet" id="sheet">
+
+  <!-- crop ticks at the seams -->
+  <span class="crop crop-v-top"></span>
+  <span class="crop crop-v-bot"></span>
+  <span class="crop crop-h-left"></span>
+  <span class="crop crop-h-right"></span>
+
+  <!-- card template — duplicated 4× via JS below to keep markup tidy -->
+</div>
+
+<template id="card-tpl">
+  <article class="card">
+    <div class="hero">
+      <div class="eyebrow">A Summer Bible School for Kids</div>
+      <h1 class="title">
+        Three Nights of<br>
+        Stories, Songs,<br>
+        Games &amp; Crafts.
+      </h1>
+      <p class="subtitle">For kids, age 3 through 6th grade.</p>
+    </div>
+
+    <div class="foot">
+      <div class="info">
+        <dl>
+          <dt>When</dt>
+          <dd>
+            July 21 &ndash; 23, 2026
+            <span class="sub">Tue &middot; Wed &middot; Thu &middot; 6:00 &ndash; 8:00 PM</span>
+          </dd>
+          <dt>Where</dt>
+          <dd>
+            Little Farms Chapel
+            <span class="sub">2518 Arthur St &middot; Coopersville, MI</span>
+          </dd>
+          <dt>Theme</dt>
+          <dd>
+            Deliverance
+            <span class="sub italic">a journey through Exodus</span>
+          </dd>
+        </dl>
+      </div>
+
+      <div class="qr">
+        <!-- QR for https://vbs.lfcopc.org (Error-correction M, margin 1) -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 27" shape-rendering="crispEdges"><path fill="#FBF5E3" d="M0 0h27v27H0z"/><path stroke="#1F1208" d="M1 1.5h7m4 0h1m1 0h2m3 0h7M1 2.5h1m5 0h1m1 0h1m2 0h3m4 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m1 0h3m1 0h1m1 0h2m2 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m1 0h1m2 0h4m3 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m2 0h1m3 0h1m2 0h1m1 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m3 0h5m1 0h1m1 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M9 8.5h3m4 0h2M1 9.5h1m5 0h1m1 0h7m2 0h2m2 0h3M2 10.5h1m1 0h3m1 0h2m1 0h2m1 0h3m3 0h5M4 11.5h4m2 0h1m3 0h4m1 0h1m1 0h2m1 0h2M1 12.5h1m1 0h1m1 0h2m1 0h1m3 0h2m1 0h2m3 0h1m1 0h1m2 0h1M1 13.5h1m5 0h1m1 0h3m4 0h2m1 0h1m5 0h1M1 14.5h5m2 0h2m3 0h1m1 0h4m1 0h1m3 0h1M1 15.5h1m2 0h1m1 0h2m1 0h1m1 0h1m2 0h1m1 0h1m2 0h4m1 0h2M1 16.5h1m2 0h3m1 0h3m2 0h1m1 0h2m1 0h1m1 0h1m1 0h2m1 0h1M1 17.5h1m1 0h2m2 0h1m2 0h2m1 0h9m1 0h1M9 18.5h3m5 0h1m3 0h1M1 19.5h7m5 0h1m3 0h1m1 0h1m1 0h1m3 0h1M1 20.5h1m5 0h1m2 0h1m1 0h1m2 0h3m3 0h1M1 21.5h1m1 0h3m1 0h1m3 0h2m3 0h6m1 0h3M1 22.5h1m1 0h3m1 0h1m2 0h2m1 0h3m1 0h1m1 0h1m4 0h2M1 23.5h1m1 0h3m1 0h1m2 0h2m2 0h2m1 0h1m4 0h2m1 0h1M1 24.5h1m5 0h1m5 0h2m2 0h2m1 0h2m3 0h1M1 25.5h7m1 0h1m2 0h3m2 0h2m3 0h1m2 0h1"/></svg>
+        <div class="url">vbs.lfcopc.org</div>
+      </div>
+    </div>
+  </article>
+</template>
+
+<script>
+  // Stamp the card 4× into the sheet. Keeps the template DRY.
+  (function() {
+    const sheet = document.getElementById('sheet');
+    const tpl   = document.getElementById('card-tpl');
+    for (let i = 0; i < 4; i++) {
+      sheet.appendChild(tpl.content.cloneNode(true));
+    }
+  })();
+</script>
+</body>
+</html>
