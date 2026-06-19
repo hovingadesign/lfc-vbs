@@ -373,9 +373,8 @@
     "data:text/calendar;charset=utf-8," + enc(ics);
 
   // ---------------- Registration link ----------------
-  // TODO: paste the real external registration URL here, then redeploy.
-  //       Every [data-register] button on the page picks it up automatically.
-  const REGISTER_URL = "https://example.com/REGISTER-LINK-TBD";
+  // Every [data-register] button on the page picks this up automatically.
+  const REGISTER_URL = "https://hub.lfcopc.org/forms/2026-lfc-vbc";
 
   document.querySelectorAll('[data-register]').forEach((el) => {
     el.href = REGISTER_URL;
