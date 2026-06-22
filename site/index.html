@@ -23,9 +23,10 @@
 <body class="relative">
 
 <!-- ======================================================== HERO -->
-<header class="relative z-10 px-5 pt-10 pb-16 sm:px-8 sm:pt-14 sm:pb-24 lg:pt-20 lg:pb-32">
+<header class="relative z-10 px-5 pt-8 pb-14 sm:px-8 sm:pt-12 sm:pb-20 lg:pt-14">
   <div class="mx-auto max-w-5xl">
 
+    <!-- eyebrow -->
     <div class="rise flex items-center justify-between text-xs sm:text-sm tracking-[0.22em] uppercase text-ink-600">
       <span class="inline-flex items-center gap-2">
         <span class="inline-block h-2 w-2 rounded-full bg-crimson-700"></span>
@@ -35,51 +36,56 @@
       <span class="sm:hidden">West MI</span>
     </div>
 
-    <div class="rise mt-12 sm:mt-16" style="animation-delay:.08s">
-      <div class="font-display">
-        <p class="text-crimson-700 font-semibold uppercase tracking-[0.18em]
-                  text-lg sm:text-xl md:text-2xl">
-          Vacation Bible School &middot; 2026
-        </p>
-        <div class="mt-3 h-px w-20 sm:w-28 bg-crimson-700/40"></div>
-      </div>
-
-      <h1 class="mt-6 font-display font-semibold leading-[0.92] tracking-tight text-ink-900
-                 text-[16vw] sm:text-[12vw] md:text-[9.5rem] lg:text-[11.5rem]">
+    <!-- title block -->
+    <div class="rise mt-9 sm:mt-12 text-center" style="animation-delay:.06s">
+      <p class="font-display text-crimson-700 font-semibold uppercase tracking-[0.2em] text-base sm:text-lg md:text-xl">
+        Vacation Bible School &middot; 2026
+      </p>
+      <h1 class="mt-3 font-display font-semibold leading-[0.88] tracking-tight text-ink-900
+                 text-[19vw] sm:text-[15vw] md:text-[9rem] lg:text-[10.5rem]">
         Deliverance
       </h1>
-
-      <p class="mt-6 max-w-2xl font-display italic text-ink-700 text-xl sm:text-2xl leading-snug">
-        A three-day journey through the book of Exodus —
-        from slavery in Egypt, to the parting of the Red Sea.
-      </p>
+      <div class="ornament-rule mx-auto mt-5 max-w-sm">
+        <span class="font-display italic text-ink-700 text-lg sm:text-xl whitespace-nowrap">A journey through Exodus</span>
+      </div>
     </div>
 
-    <!-- Date/place ribbon -->
-    <div class="rise mt-10 sm:mt-14" style="animation-delay:.18s">
-      <div class="border-t border-b border-ink-800/15 py-5 sm:py-6
-                  grid grid-cols-2 md:grid-cols-4 gap-y-5 gap-x-6">
-        <div>
-          <div class="text-[0.68rem] sm:text-xs tracking-[0.2em] uppercase text-ink-500">Dates</div>
-          <div class="mt-1 font-display text-lg sm:text-xl text-ink-900" id="hero-dates">July 21 &ndash; 23, 2026</div>
+    <!-- hero illustration -->
+    <figure class="rise mt-9 sm:mt-12" style="animation-delay:.14s">
+      <img src="assets/hero-redsea.png" width="1264" height="848"
+           alt="The parting of the Red Sea — a family follows Moses along the dry seabed toward a glowing sunrise."
+           class="w-full rounded-card border border-ink-800/15 shadow-[0_45px_100px_-45px_rgba(31,18,8,0.6)]">
+    </figure>
+
+    <!-- date/place ribbon -->
+    <div class="rise mt-9 sm:mt-12" style="animation-delay:.2s">
+      <dl class="border-t border-b border-ink-800/15 grid grid-cols-2 md:grid-cols-4 text-center
+                 divide-ink-800/10 md:divide-x">
+        <div class="py-4 sm:py-5">
+          <dt class="text-[0.66rem] tracking-[0.2em] uppercase text-crimson-700 font-display font-semibold">When</dt>
+          <dd class="mt-1 font-display text-lg text-ink-900" id="hero-dates">July 21 &ndash; 23</dd>
+          <dd class="text-ink-600 text-sm" id="hero-times">6:00 &ndash; 8:00 PM</dd>
         </div>
-        <div>
-          <div class="text-[0.68rem] sm:text-xs tracking-[0.2em] uppercase text-ink-500">Nightly</div>
-          <div class="mt-1 font-display text-lg sm:text-xl text-ink-900" id="hero-times">6:00 &ndash; 8:00 PM</div>
+        <div class="py-4 sm:py-5">
+          <dt class="text-[0.66rem] tracking-[0.2em] uppercase text-crimson-700 font-display font-semibold">Where</dt>
+          <dd class="mt-1 font-display text-lg text-ink-900">Little Farms Chapel</dd>
+          <dd class="text-ink-600 text-sm">Coopersville, MI</dd>
         </div>
-        <div>
-          <div class="text-[0.68rem] sm:text-xs tracking-[0.2em] uppercase text-ink-500">Ages</div>
-          <div class="mt-1 font-display text-lg sm:text-xl text-ink-900">Age 3 &mdash; 6th Grade</div>
+        <div class="py-4 sm:py-5">
+          <dt class="text-[0.66rem] tracking-[0.2em] uppercase text-crimson-700 font-display font-semibold">Who</dt>
+          <dd class="mt-1 font-display text-lg text-ink-900">Age 3 &ndash; 6th Grade</dd>
+          <dd class="text-ink-600 text-sm">Groups by age</dd>
         </div>
-        <div>
-          <div class="text-[0.68rem] sm:text-xs tracking-[0.2em] uppercase text-ink-500">Cost</div>
-          <div class="mt-1 font-display text-lg sm:text-xl text-ink-900">Free · all welcome</div>
+        <div class="py-4 sm:py-5">
+          <dt class="text-[0.66rem] tracking-[0.2em] uppercase text-crimson-700 font-display font-semibold">Cost</dt>
+          <dd class="mt-1 font-display text-lg text-ink-900">Free</dd>
+          <dd class="text-ink-600 text-sm">All welcome</dd>
         </div>
-      </div>
+      </dl>
     </div>
 
     <!-- CTAs -->
-    <div class="rise mt-8 sm:mt-10 flex flex-wrap gap-3" style="animation-delay:.26s">
+    <div class="rise mt-8 flex flex-wrap justify-center gap-3" style="animation-delay:.26s">
       <a href="#" data-register class="btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
         Register now
